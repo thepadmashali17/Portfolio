@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f4f4f4; /* Light Gray */
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    background-color: white; /* White for nav background */
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: #2c3e50; /* Dark Slate Gray */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #16a085; /* Teal */
+    text-shadow: 0 0 10px #16a085;
+}
+
+.hamburg,
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #2c3e50; /* Dark Slate Gray */
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links {
+    display: flex;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: #2c3e50; /* Dark Slate Gray */
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+   position: absolute;
+   content: "";
+   bottom: -3px;
+   left: 0;
+   width: 0%;
+   height: 3px;
+   background-color: #16a085; /* Teal */
+}
+
+.nav-container .links a:hover::before {
+   width: 100%;
+}
+
+.nav-container .links a:hover {
+   color: #16a085; /* Teal */
+}
+
+.dropdown {
+   z-index: 100;
+   position: absolute;
+   top: 0;
+   transform: translateY(-500px);
+   width: 100%;
+   height: auto;
+   backdrop-filter: blur(4px) brightness(40%);
+   box-shadow: 0 0 20px black;
+   transition: 0.2s linear;
+}
+
+.dropdown .links a {
+   display:flex ;
+   color:white ; /* Keep dropdown text white for contrast */
+   text-decoration:none ;
+   justify-content:center ;
+   padding :15px 0 ;
+   align-items:center ;
+}
+
+.dropdown .links a:hover {
+   background-color:#1abc9c; /* Light Teal */
+}
+
+section {
+   width :100% ;
+   height :90vh ;
+}
+
+.main-container {
+   width :100% ;
+   height :100% ;
+   display:flex ;
+   justify-content : space-evenly ;
+   align-items : center ;
+}
+
+.main-container .image {
+   width :400px; /* Set width for circle */
+   height :400px; /* Set height equal to width for a circle */
+   border-radius :50%; /* Make it circular */
+   overflow :hidden ; /* Ensure the image fits within the circle */
+   box-shadow :0 0 50px #4A4A4A; /* Teal shadow */
+}
+
+.main-container .image img {
+   width :100% ;
+   height :100%; /* Ensure the image covers the entire circle */
+   object-fit :cover ; /* Maintain aspect ratio and cover the entire area */
+}
+
+.main-container .image:hover {
+   animation :animate 1.5s ease-in-out infinite ;
+}
+
+@keyframes animate {
+   0%{
+       scale :1 ;
+   }
+   50%{
+       scale :1.05 ;
+   }
+   100%{
+       scale :1 ;
+   }
+}
+
+.main-container .content {
+   color :#2c3e50 ; /* Dark Slate Gray */
+   width :40% ;
+   min-height :100px ;
+}
+
+.content h1 {
+   font-size :clamp(1rem,1rem +5vw,1.8rem) ;
+}
+
+.content h1 span {
+   color :#16a085 ; /* Teal */
+   text-shadow :0 0 10px #16a085 ;
+}
+
+.content .typewriter {
+   font-size :clamp(1rem,1rem +5vw,2.5rem) ;
+   font-weight :600 ;
+}
+
+.content .typewriter-text {
+   color :#16a085 ; /* Teal */
+   text-shadow :0 0 10px #16a085 ;
+}
+
+.content p {
+   font-size :clamp(0.4rem ,0.2rem +9vw,1rem) ;
+   margin :10px 0 ;
+}
+
+.social-links i {
+     display:inline-flex ;
+     justify-content:center ;
+     align-items:center ;
+     width :3rem ;
+     height :3rem ;
+     background-color :transparent ;
+     border :0.2rem solid #16a085 ; /* Teal border */
+     border-radius :50% ;
+     color:#16a085 ; /* Teal */
+     margin :5px 15px ;
+     font-size :1.5rem ;
+     transition :.2s linear ;
+ }
+
+.social-links i:hover {  
+     scale :1.3 ;  
+     color:black ;  
+     background-color:#16a085 ; /* Teal on hover */  
+     filter :drop-shadow(0 0 10px #16a085) ;  
+ }
+
+.content button {  
+     width :50% ;  
+     height :6vh ;  
+     margin :30px ;  
+     background-color:#16a085 ; /* Teal button */  
+     color:white ;  
+     border:none ;  
+     outline:none ;  
+     font-size :120% ;  
+     font-weight :700 ;  
+     border-radius :5px ;  
+     transition :.2s linear ;  
+ }
+
+.content button:hover {  
+      scale :1.1 ;  
+      color:#16a085 ;  
+      border :2px solid #16a085 ;  
+      background-color:white; /* White on hover */  
+      font-weight :700 ;  
+      box-shadow :0 0 40px #16a085;  
+ }
+
+/* Media Queries */
+
+@media (max-width :884px) {  
+      nav .logo{  
+          position:absolute ;  
+          top :16px ;  
+          left :15px ;  
+          font-size :1.5rem ;  
+      }  
+      .main-container {  
+          display:flex ;  
+          flex-direction :column ;  
+      }  
+      .nav-container .links {  
+          display:none ;  
+      }  
+      .hamburg,
+      .cancel {  
+          display:block ;  
+      }   
+      .main-container .content {   
+          width :80%;   
+       }    
+       .social-links i {    
+           width :2.5rem;    
+           height :2.5rem;    
+           font-size :1.5rem;    
+       }    
+       .main-container .image {    
+           z-index :-1;    
+           width :50%;    
+           height :60%;    
+       }    
+}    
+
+@media (max-width :440px){   
+       .main-container .image {   
+           width :50%;   
+           height :60%;   
+           margin-bottom :0px;   
+       }    
+       .main-container .content {    
+           width :80%;    
+       }    
+       .main-container button {    
+           margin-top :15px;    
+       }    
+}
