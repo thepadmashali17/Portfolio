@@ -15,57 +15,77 @@
                 Vikas <span>Padmashali</span>
             </div>
             <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Services</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Contact</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+                    <a href="#home">Home</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                    <a href="#about">About</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                    <a href="#skills">Skills</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                    <a href="#services">Services</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            <i class="fa-solid fa-bars hamburg" onclick="toggleMenu()"></i>
         </div>
         <div class="dropdown">
             <div class="links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skills</a>
-                <a href="#">Service</a>
-                <a href="#">Contact</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+                <a href="#home" onclick="closeMenu()">Home</a>
+                <a href="#about" onclick="closeMenu()">About</a>
+                <a href="#skills" onclick="closeMenu()">Skills</a>
+                <a href="#services" onclick="closeMenu()">Services</a>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="closeMenu()"></i>
             </div>
         </div>
     </nav>
-    <section>
+    <section id="home">
         <div class="main-container">
             <div class="image" data-aos="zoom-out" data-aos-duration="3000">
-                <img src="20240430_235322.jpg" alt="Vikas Padmashali"> <!-- Ensure the image file is in the same directory -->
+                <img src="20240430_235322.jpg" alt="Vikas Padmashali">
             </div>
             <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Vikas</span></h1>
-                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I am a passionate student eager to explore the world of computer science. My journey in education has equipped me with a solid foundation in programming languages and software development, and I am excited to apply my knowledge in real-world scenarios. I have a keen interest in web development and love taking on challenges that allow me to grow and learn.</p>
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">
+                    Hey I'm <span>Vikas</span>
+                </h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                    I'm a <span class="typewriter-text"></span><span class="cursor">|</span>
+                </div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                    I am a passionate student eager to explore the world of computer science. 
+                    My journey in education has equipped me with a solid foundation in programming 
+                    languages and software development, and I am excited to apply my knowledge in 
+                    real-world scenarios.
+                </p>
                 <div class="social-links">
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration "1500"
-                    data- aos-delay= "1500"><i class= "fa-brands fa-linkedin"></i></a> 
-                    <a href="#"data- aos= "fade-up"
-                    data- aos-duration= "1500"
-                    data- aos-delay= "1600"><i class= "fa-brands fa-twitter"></i></a> 
-                </div> 
-                <div class= "btn"
-                    data- aos= "zoom-in"
-                    data- aos-duration= "1500"
-                    data- aos-delay= "1800"> 
-                    <button>Hire me</button> 
-                </div> 
-            </div> 
-        </div> 
-    </section> 
-    <script src= "https://unpkg.com/aos@next/dist/aos.js"></script> 
-    <script> 
-      AOS.init({offset: 0}); 
-    </script> 
-    <script src= "script.js"></script> 
-</body> 
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    <button onclick="contactMe()">Hire me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset: 0});
+    </script>
+    <script src="script.js"></script>
+</body>
 </html>
-
