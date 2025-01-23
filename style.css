@@ -295,7 +295,6 @@ section {
     }
 }
 
-/* Add these styles to your existing style.css file */
 
 .section-container {
     max-width: 1200px;
@@ -322,7 +321,6 @@ section {
     background-color: #16a085;
 }
 
-/* About Section Styles */
 .about-content {
     display: flex;
     gap: 40px;
@@ -356,7 +354,6 @@ section {
     color: #16a085;
 }
 
-/* Skills Section Styles */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -401,7 +398,6 @@ section {
     transition: width 1s ease-in-out;
 }
 
-/* Contact Section Styles */
 .contact-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -499,7 +495,6 @@ section {
     }
 }
 
-/* Add these styles to your CSS file */
 
 .experience-container {
     margin-top: 60px;
@@ -772,7 +767,6 @@ section {
     }
 }
 
-/* Skills Section Styles */
 #skills {
     padding: 80px 20px;
     background-color: #fff;
@@ -879,7 +873,6 @@ section {
     }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .skills-container {
         flex-direction: column;
